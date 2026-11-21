@@ -1,0 +1,47 @@
+{
+  "dataset": "IntentBench",
+  "status": "blocked_missing_inputs",
+  "recommended_to_start": false,
+  "formal_input_samples_available": 0,
+  "missing_inputs": [
+    {
+      "path": "IntentBench/qa.json",
+      "expected_type": "file"
+    },
+    {
+      "path": "IntentBench/videos/",
+      "expected_type": "directory"
+    }
+  ],
+  "full_dataset": {
+    "questions": null,
+    "unique_videos": null,
+    "missing_qid": null,
+    "duplicate_qid": null,
+    "question_type_counts": null,
+    "questions_per_video": null,
+    "missing_video_files": null,
+    "video_size_distribution": null,
+    "video_format_distribution": null,
+    "invalid_samples": null
+  },
+  "media": {
+    "status": "not_run",
+    "opened": null,
+    "unreadable": null,
+    "missing_video_stream": null,
+    "missing_audio_stream": null,
+    "duration": null,
+    "resolution": null,
+    "frame_rate": null
+  },
+  "existing_smoke_archive": {
+    "path": "humanomniv2_smoke_backup.tar.gz",
+    "annotation": "IntentBench/qa_smoke.json",
+    "questions": 6,
+    "unique_video_references": 5,
+    "includes_video_files": false
+  },
+  "model_started": false,
+  "gpu_used": false
+}

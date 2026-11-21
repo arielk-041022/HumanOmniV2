@@ -1,0 +1,372 @@
+{
+  "results": [
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/-99aZZhUgRk_trimmed-out.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/-99aZZhUgRk_trimmed-out.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nAre the two respectful towards each other? Options:\nA.The man cares for his parents, as he dropped out of school to prevent straining the family finances.\nB.The two people are respectful to each other because they are acquaintances, not enemies or good friends.\nC.Yes, he endures hardships well.\nD.The two people are respectful to each other, the woman offends the man.\n Please provide only the single option letter (e.g., A, B, C, D, etc.) within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<answer>B</answer>",
+      "problem_type": "multiple choice",
+      "raw": {
+        "problem": "Are the two respectful towards each other?",
+        "problem_type": "multiple choice",
+        "options": [
+          "A.The man cares for his parents, as he dropped out of school to prevent straining the family finances.",
+          "B.The two people are respectful to each other because they are acquaintances, not enemies or good friends.",
+          "C.Yes, he endures hardships well.",
+          "D.The two people are respectful to each other, the woman offends the man."
+        ],
+        "solution": "<answer>B</answer>",
+        "answer": "B",
+        "data_type": "video",
+        "video": "-99aZZhUgRk_trimmed-out.mp4",
+        "qid": "-99aZZhUgRk_q2_10",
+        "Type": "other",
+        "source": "Socialiq"
+      },
+      "output": "<context>In the video, a man and a woman are sitting on opposite sides of a table, facing each other. The man is wearing a dark blue top and jeans, while the woman is dressed in a light green top and dark pants. They are both nodding frequently, with smiles on their faces, and their body language appears natural and relaxed. The background is a workshop environment, with a machine labeled \"CAUTION\" and other equipment visible.\nIn the audio, the man's tone is low and gentle, while the woman's tone is calm and slow. The conversation revolves around the man's personal experiences, including dropping out of high school due to family financial difficulties and the challenges he faced during his growth. The woman expresses interest in the man's story with \"That's amazing\" and asks, \"What kind of challenges were you facing?\" without interrupting him. The man responds calmly and clearly, and the overall conversation concludes in a harmonious and pleasant atmosphere.</context><think>Okay, I'm looking at this video and listening to the audio to figure out if the man and woman are being respectful to each other.\n\nFirst, let me focus on what I see. They're sitting across a table, facing each other. He's in a dark blue top and jeans, she's in a light green top and dark pants. Their body language looks natural – I see them nodding frequently and smiling. This makes me think they're engaged and showing mutual respect. The setting looks like a workshop, with some equipment around, but that doesn't seem to interfere with their interaction.\n\nNow, let me listen to the audio. The man's voice is low and gentle, and the woman's is calm and slow. They're talking about his personal experiences, like dropping out of high school because his parents couldn't afford it, and the difficulties he faced growing up. When she says, \"That's amazing,\" and then asks, \"What kind of challenges were you facing?\" her tone is curious, not at all like she's interrupting or being rude. He responds calmly and clearly. The whole conversation feels harmonious and pleasant.\n\nSo, considering both what I see and hear, they seem respectful. I don't see any signs of conflict or insincerity. Let me just quickly review the options I have in mind:\n\n*   One option mentions his parents and family finances, but that's part of his story, not really about their interaction *right now*.\n*   Another option talks about them being \"acquaintances\"",
+      "prediction": "",
+      "reward": 0.0,
+      "original_prediction": "<context>The person is wearing a yellow jacket and a blue inner layer. The background is a public restroom with beige tiles, a wooden door, and a white hand dryer. The person is sitting on a chair, leaning slightly forward, with a serious expression and a determined look in their eyes. Their mouth is slightly open, and they are speaking in a steady tone. The audio indicates the person is speaking in a steady tone, without noticeable pauses or emotional fluctuations.</context><think>Okay, I'm looking at the person in this video. They're in a public restroom, which is a bit unusual for an interview, but let's focus on them. They're wearing a yellow jacket and a blue inner layer. Their expression is quite serious, and their eyes have a determined look. They're leaning forward a little on the chair, which makes me think they're really engaged in what they're saying. Now, I'm listening to the audio. Their voice is steady, no big emotional swings, no hesitation. They're speaking quite clearly. The question they're answering is, \"Have you concealed a fact to your family or friends in the past year?\" I need to figure out if they're being truthful. Let me look closely at their face again. Their mouth is slightly open, and they seem to be speaking directly. The serious expression and determined eyes, combined with that steady, unhesitant tone of voice, make me think they're quite sure of what they're saying. If they were lying, I'd expect more signs of nervousness – maybe fidgeting, a change in their voice, some eye contact issues. But I don't see or hear anything like that. Their body language is consistent with someone who is confident in their statement. So, based on their serious demeanor, determined eyes, and steady, direct speech, I'm concluding they are not lying.</think><answer>No</answer>",
+      "original_reward": 0.0,
+      "previous_audited_prediction": "",
+      "previous_audited_reward": 0.0,
+      "prediction_status": "missing_answer"
+    },
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/-99aZZhUgRk_trimmed-out.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/-99aZZhUgRk_trimmed-out.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nDoes the man care for his parents? Options:\nA.Yes, he endures hardships well.\nB.The man cares for his parents, as he dropped out of school to prevent straining the family finances.\nC.The two people are respectful to each other because they are acquaintances, not enemies or good friends.\nD.The woman is a famous actress.\n Please provide only the single option letter (e.g., A, B, C, D, etc.) within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<answer>B</answer>",
+      "problem_type": "multiple choice",
+      "raw": {
+        "problem": "Does the man care for his parents?",
+        "problem_type": "multiple choice",
+        "options": [
+          "A.Yes, he endures hardships well.",
+          "B.The man cares for his parents, as he dropped out of school to prevent straining the family finances.",
+          "C.The two people are respectful to each other because they are acquaintances, not enemies or good friends.",
+          "D.The woman is a famous actress."
+        ],
+        "solution": "<answer>B</answer>",
+        "answer": "B",
+        "data_type": "video",
+        "video": "-99aZZhUgRk_trimmed-out.mp4",
+        "qid": "-99aZZhUgRk_q1_4",
+        "Type": "other",
+        "source": "Socialiq"
+      },
+      "output": "<context>In the video, a man and a woman are sitting on opposite sides of a table, having a conversation. The man is wearing a dark blue top and jeans, while the woman is dressed in a light green top and dark pants. The background features a light-colored brick wall, a window, and some machinery, creating a formal and focused atmosphere. The man is gesturing with his hands, appearing focused and confident, while the woman is listening attentively, nodding and smiling, showing interest and engagement in the conversation.\nIn the audio, the man's tone is low and gentle, with a slow pace, conveying a calm and confident demeanor. The woman's response is in a low, gentle tone, with a slow pace, showing empathy and support. The conversation revolves around the man's personal experiences, including dropping out of high school due to family financial difficulties and the challenges he faced during his growth, ultimately emphasizing his determination to overcome difficulties and his current studies in engineering at Dartmouth.</context><think>Okay, I'm trying to figure out if the man cares for his parents. I'm listening to what he's saying and looking at him.\n\nHe mentioned dropping out of high school because his parents couldn't afford the fees. That's a big step, and it makes me think he's taking on a responsibility for his family, which is often a sign of caring. He also said it was \"hard for me\" to drop out, so he's definitely weighing his own needs against the family's. This really points to him caring for them.\n\nNow, let me consider the options.\nOption B says he dropped out to \"prevent straining the family finances.\" This directly matches what I heard him say about his parents not being able to pay for school. It clearly shows he's concerned for their well-being.\nOption A just says he \"endures hardships.\" While he does, this option doesn't really connect his endurance to his care for his parents in a specific way.\nOption C talks about their relationship being \"respectful\" and whether they're \"acquaintances\" or \"enemies\" or \"good friends.\" I don't hear anything about their relationship type, so this feels like a distraction.\nOption D mentions a \"woman\" and something about her being an \"actress.\" I can see a woman in the video, but she's just part of the conversation, and this option seems completely unrelated to the main topic of his care for his parents.\n\nSo, based on his words about dropping out to ease family",
+      "prediction": "",
+      "reward": 0.0,
+      "original_prediction": "<context>The person is wearing a yellow jacket and a blue inner layer. The background is a public restroom with beige tiles, a wooden door, and a white hand dryer. The person is sitting on a chair, leaning slightly forward, with a serious expression and a determined look in their eyes. Their mouth is slightly open, and they are speaking in a steady tone. The audio indicates the person is speaking in a steady tone, without noticeable pauses or emotional fluctuations.</context><think>Okay, I'm looking at the person in this video. They're in a public restroom, which is a bit unusual for an interview, but let's focus on them. They're wearing a yellow jacket and a blue inner layer. Their expression is quite serious, and their eyes have a determined look. They're leaning forward a little on the chair, which makes me think they're really engaged in what they're saying. Now, I'm listening to the audio. Their voice is steady, no big emotional swings, no hesitation. They're speaking quite clearly. The question they're answering is, \"Have you concealed a fact to your family or friends in the past year?\" I need to figure out if they're being truthful. Let me look closely at their face again. Their mouth is slightly open, and they seem to be speaking directly. The serious expression and determined eyes, combined with that steady, unhesitant tone of voice, make me think they're quite sure of what they're saying. If they were lying, I'd expect more signs of nervousness – maybe fidgeting, a change in their voice, some eye contact issues. But I don't see or hear anything like that. Their body language is consistent with someone who is confident in their statement. So, based on their serious demeanor, determined eyes, and steady, direct speech, I'm concluding they are not lying.</think><answer>No</answer>",
+      "original_reward": 0.0,
+      "previous_audited_prediction": "",
+      "previous_audited_reward": 0.0,
+      "prediction_status": "missing_answer"
+    },
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/sample_00001350.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/sample_00001350.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nWhat emotions did the doctor display during the phone call? Options:\nA. Acceptance\nB. Pleased\nC. Remember\nD. Nervous\nE. Irony\nF. Positive\n Please provide only the single or multiple option letter (e.g., A for single option or A,E for multi option, etc.) within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<context>The video shows a person in a doctor's uniform, seemingly in a hospital, making a phone call. Initially, the doctor's expression is serious, with a slight frown and downturned mouth. As the video progresses, the frown becomes more pronounced, and their facial expression appears negative and confused. Aurally, the character exclaims 'What?' with a raised volume. Subtitles indicate the character says, 'Hello, what? Okay, I'll be right there.'</context><think>Okay, I'm observing this person, who appears to be a doctor in a hospital, while they're on a phone call. At the start, their expression is quite serious; I notice a slight frown and the corners of their mouth are turned down. This suggests they might be concentrating intently or perhaps dealing with something weighty from the outset. As the call continues, I see a shift. Their frown deepens, and their overall facial expression becomes distinctly negative. There's a strong look of confusion on their face now. This change makes me think they've just received some unsettling or unexpected information. Then, I hear their voice – they exclaim 'What?!' quite loudly. That raised volume and the word itself indicates surprise, maybe even shock, strongly suggesting an unexpected and urgent event has just been communicated to them. The subtitles confirm this: 'Hello, what? Okay, I'll be right there.' The 'What?' confirms the surprise, and the immediate follow-up, 'Okay, I'll be right there,' signifies an urgent need to act. This isn't a casual conversation; they're clearly responding to an emergency. Considering the progression from a serious demeanor to pronounced confusion and a shocked vocal reaction, coupled with the immediate, urgent commitment to go somewhere, I can sense a build-up of tension. The unexpected nature of the news, the visible confusion, and the sudden need to respond to what seems like an emergency situation would definitely put someone on edge. They seem to be processing something alarming and are now compelled to act quickly under pressure. This state of heightened alertness, apprehension about what they are about to face, and the obvious stress of the moment leads me to conclude they are feeling quite Nervous.</think><answer>D</answer>",
+      "problem_type": "emer_ov_mc",
+      "raw": {
+        "problem": "What emotions did the doctor display during the phone call?",
+        "problem_type": "emer_ov_mc",
+        "options": [
+          "A. Acceptance",
+          "B. Pleased",
+          "C. Remember",
+          "D. Nervous",
+          "E. Irony",
+          "F. Positive"
+        ],
+        "solution": "<context>The video shows a person in a doctor's uniform, seemingly in a hospital, making a phone call. Initially, the doctor's expression is serious, with a slight frown and downturned mouth. As the video progresses, the frown becomes more pronounced, and their facial expression appears negative and confused. Aurally, the character exclaims 'What?' with a raised volume. Subtitles indicate the character says, 'Hello, what? Okay, I'll be right there.'</context><think>Okay, I'm observing this person, who appears to be a doctor in a hospital, while they're on a phone call. At the start, their expression is quite serious; I notice a slight frown and the corners of their mouth are turned down. This suggests they might be concentrating intently or perhaps dealing with something weighty from the outset. As the call continues, I see a shift. Their frown deepens, and their overall facial expression becomes distinctly negative. There's a strong look of confusion on their face now. This change makes me think they've just received some unsettling or unexpected information. Then, I hear their voice – they exclaim 'What?!' quite loudly. That raised volume and the word itself indicates surprise, maybe even shock, strongly suggesting an unexpected and urgent event has just been communicated to them. The subtitles confirm this: 'Hello, what? Okay, I'll be right there.' The 'What?' confirms the surprise, and the immediate follow-up, 'Okay, I'll be right there,' signifies an urgent need to act. This isn't a casual conversation; they're clearly responding to an emergency. Considering the progression from a serious demeanor to pronounced confusion and a shocked vocal reaction, coupled with the immediate, urgent commitment to go somewhere, I can sense a build-up of tension. The unexpected nature of the news, the visible confusion, and the sudden need to respond to what seems like an emergency situation would definitely put someone on edge. They seem to be processing something alarming and are now compelled to act quickly under pressure. This state of heightened alertness, apprehension about what they are about to face, and the obvious stress of the moment leads me to conclude they are feeling quite Nervous.</think><answer>D</answer>",
+        "answer": "D",
+        "data_type": "video",
+        "clean_list": [
+          "Nervous"
+        ],
+        "video": "sample_00001350.mp4",
+        "Type": "emotion",
+        "source": "EMER"
+      },
+      "output": "<context>The video shows a male character in a doctor's outfit. He is holding a phone to his ear and his facial expression is tense. The audio reveals his voice is low and monotonous. Subtitles display the following dialogue: \"Hey? What? Okay, I'll be right there.\"</context><think>Okay, I'm looking at the screen now. I see a man, and he's wearing what looks like a doctor's uniform, so I'll assume he's a doctor. He's holding a phone to his ear, so he's on a call. My attention is drawn to his face – his expression seems quite tense. That's an interesting clue; it makes me wonder what kind of call this is. Now, I'm tuning into the audio. His voice... it's quite low and doesn't really change in tone, it's quite monotonous. This isn't a cheerful or excited voice at all. It sounds a bit flat. Let me check the subtitles to see what he's saying. The text says, 'Hey? What? Okay, I'll be right there.' Ah, that's a very short exchange. 'Hey?' sounds like he's just picked up the phone or is trying to get someone's attention. 'What?' immediately following suggests he's just received some information, and it seems to have caught him a bit off guard. His tone there, even if it's low and flat, could indicate a slight surprise or concern. Then he says, 'Okay, I'll be right there.' This tells me he's acknowledging the information and is prepared to go somewhere or do something in response. So, putting it all together: his tense facial expression, the low, monotonous, somewhat flat tone of his voice, and the short, somewhat surprised exchange ('Hey?', 'What?', 'Okay, I'll be right there') – it all points to a situation that's not entirely positive. He's not relaxed. The 'tense' expression and the 'flat' tone don't suggest he's happy or calm. The content of the conversation, especially 'What?' and his immediate response to go somewhere, implies a sense of urgency or perhaps some unexpected news. This makes me think he's feeling a bit anxious or on edge. Yes, considering all these cues, I'd say he seems nervous.</think><answer>D</answer>",
+      "prediction": "D",
+      "reward": 1.0,
+      "original_prediction": "D",
+      "original_reward": 1.0,
+      "previous_audited_prediction": "D",
+      "previous_audited_reward": 1.0,
+      "prediction_status": "valid"
+    },
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/sample_00001354.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/sample_00001354.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nWhat emotions is the young man displaying in the video? Options:\nA. Yearning\nB. Joyful\nC. Reflect\nD. Sorrow\nE. Happy\nF. Approve\n Please provide only the single or multiple option letter (e.g., A for single option or A,E for multi option, etc.) within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<context>The video displays a male character. The background is blurry, but it suggests a social environment, possibly a restaurant or bar. The character's facial features show the corners of his mouth upturned in a smile, and his eyes are slightly squinted. The audio contains distinct laughter. Subtitles read: 'Hahaha.'</context><think>Okay, I'm looking at the screen, and there's a man. The background is a bit out of focus, but it feels like he's in a public place, maybe a restaurant or a bar, given the general vibe. Now, let me look closer at his face. Ah, yes, the corners of his mouth are definitely turned upwards – that's a smile. And his eyes, they're a little squinted. People often squint their eyes like that when they're genuinely happy or amused. So, his facial expression seems positive. I'm also hearing something... yes, that's clear laughter in the audio. It's quite distinct. And the subtitles on screen actually say 'Hahaha,' which seems to correspond to the laughter I'm hearing and likely what the character is expressing. When someone is smiling, has that happy crinkle in their eyes, and is audibly laughing, it's a very strong indication that they are feeling good. This combination of visual cues (smile, squinted eyes) and the auditory cue of laughter, reinforced by the subtitle, leads me to believe he's experiencing a positive emotion. He seems to be reacting to something humorous or enjoyable. Therefore, I conclude that the character is feeling 'Joyful' and 'Happy'.</think><answer>B,E</answer>",
+      "problem_type": "emer_ov_mc",
+      "raw": {
+        "problem": "What emotions is the young man displaying in the video?",
+        "problem_type": "emer_ov_mc",
+        "options": [
+          "A. Yearning",
+          "B. Joyful",
+          "C. Reflect",
+          "D. Sorrow",
+          "E. Happy",
+          "F. Approve"
+        ],
+        "solution": "<context>The video displays a male character. The background is blurry, but it suggests a social environment, possibly a restaurant or bar. The character's facial features show the corners of his mouth upturned in a smile, and his eyes are slightly squinted. The audio contains distinct laughter. Subtitles read: 'Hahaha.'</context><think>Okay, I'm looking at the screen, and there's a man. The background is a bit out of focus, but it feels like he's in a public place, maybe a restaurant or a bar, given the general vibe. Now, let me look closer at his face. Ah, yes, the corners of his mouth are definitely turned upwards – that's a smile. And his eyes, they're a little squinted. People often squint their eyes like that when they're genuinely happy or amused. So, his facial expression seems positive. I'm also hearing something... yes, that's clear laughter in the audio. It's quite distinct. And the subtitles on screen actually say 'Hahaha,' which seems to correspond to the laughter I'm hearing and likely what the character is expressing. When someone is smiling, has that happy crinkle in their eyes, and is audibly laughing, it's a very strong indication that they are feeling good. This combination of visual cues (smile, squinted eyes) and the auditory cue of laughter, reinforced by the subtitle, leads me to believe he's experiencing a positive emotion. He seems to be reacting to something humorous or enjoyable. Therefore, I conclude that the character is feeling 'Joyful' and 'Happy'.</think><answer>B,E</answer>",
+        "answer": "B,E",
+        "data_type": "video",
+        "clean_list": [
+          "Joyful",
+          "Happy"
+        ],
+        "video": "sample_00001354.mp4",
+        "Type": "emotion",
+        "source": "EMER"
+      },
+      "output": "<context>The video shows a male character with a slight smile, upturned mouth corners, and eyes slightly squinted. The audio features a low, gentle tone with a hint of laughter. The subtitle reads: \"Win a ten thousand yuan health check-up fund.\"</context><think>Okay, I'm looking at the screen now. I see a male character, and his face gives me some clues. He has a slight smile, the corners of his mouth are turned up, and his eyes are a bit squinted. This usually means someone is feeling good, perhaps happy or content. Now, I'm listening to the audio. His voice is quite low and gentle, and there's a definite hint of laughter in his tone. This reinforces the idea that he's in a positive emotional state. The audio suggests he's feeling light-hearted and perhaps amused. Let me check the subtitle to see if it offers any more context. It says, 'Win a ten thousand yuan health check-up fund.' So, he's just won a significant amount of money for a health check-up. That's a very positive event! Combining the visual cues of his smile and the gentle, slightly laughing quality in his voice, along with the news of winning a substantial sum of money, it seems clear he's feeling very pleased and happy. The overall impression is one of joy and satisfaction. Therefore, I conclude he is feeling **Joyful**, **Happy**, and this seems to be a result of a significant, positive event, so I might also consider **Satisfied**.</think><answer>B,E</answer>",
+      "prediction": "B,E",
+      "reward": 1.0,
+      "original_prediction": "B,E",
+      "original_reward": 1.0,
+      "previous_audited_prediction": "B,E",
+      "previous_audited_reward": 1.0,
+      "prediction_status": "valid"
+    },
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/030-21-24.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/030-21-24.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nThe person in the video is answersing the question \"Have you ever lied to avoid responsibility?\". Please carefully observe the person, based on their expression, body languge, eyes, the content and way of speaking, etc. to determine whether the person in the video is lying when he/she answers the question. Please answer Yes or No within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<answer>Yes</answer>",
+      "problem_type": "judge",
+      "raw": {
+        "Question order": "21",
+        "Question id": "24",
+        "Interviewer evaluation": "5",
+        "Self evaluation of interviewee": "4",
+        "data_type": "video",
+        "problem_type": "judge",
+        "problem": "The person in the video is answersing the question \"Have you ever lied to avoid responsibility?\". Please carefully observe the person, based on their expression, body languge, eyes, the content and way of speaking, etc. to determine whether the person in the video is lying when he/she answers the question.",
+        "video": "030-21-24.mp4",
+        "solution": "<answer>Yes</answer>",
+        "answer": "Yes",
+        "Type": "deception",
+        "source": "MDPE"
+      },
+      "output": "<context>The person is wearing a red patterned jacket, sitting in an indoor environment with a desk, computer, and soundproofing panels in the background. Their expression is calm, with no significant changes in facial features. Their body posture is relaxed, with no noticeable tension in the neck or shoulders. The eyes are focused, occasionally looking to the side. The audio features a low, gentle tone, with a slow pace and no signs of urgency or anxiety. The speech content is brief, directly stating \"No, this is not the case\" in a calm manner.</context><think>Okay, I'm looking at the screen now. I see a person in a red patterned jacket. They're sitting quite calmly, no frowning or anything like that on their face. Their body language seems relaxed too – no stiff shoulders or anything that suggests they're nervous. Their eyes are looking around a bit, but they seem focused. Now, listening to the audio, their voice is quite low and gentle, and they're speaking slowly, not rushed at all. It doesn't sound like they're anxious or trying to hide anything. The content of their speech is also important. They're directly saying, \"No, this is not the case.\" That's a pretty straightforward denial. So, putting it all together – their calm expression, relaxed posture, focused eyes, gentle and slow voice, and the direct denial in their speech – it all points to them being truthful. I don't see any signs that they're lying. Therefore, based on what I'm seeing and hearing, I conclude that the person is not lying.</think><answer>No</answer>",
+      "prediction": "No",
+      "reward": 0.0,
+      "original_prediction": "No",
+      "original_reward": 0,
+      "previous_audited_prediction": "No",
+      "previous_audited_reward": 0,
+      "prediction_status": "valid"
+    },
+    {
+      "prompt": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.\n\nBegin by thoroughly understanding the image, video, audio or other available context information, and then proceed with an in-depth analysis related to the question. \n\nIn reasoning, It is encouraged to incorporate self-reflection and verification into your reasoning process. You are encouraged to review the image, video, audio, or other context information to ensure the answer accuracy.\n\nProvide your understanding of the image, video, and audio between the <context> </context> tags, detail the reasoning between the <think> </think> tags, and then give your final answer between the <answer> </answer> tags.\n"
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "IntentBench/videos/035-22-23.mp4",
+              "fps": 1.0,
+              "max_frames": 8,
+              "max_pixels": 230400
+            },
+            {
+              "type": "audio",
+              "audio": "IntentBench/videos/035-22-23.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Here is a video, with the audio from the video.\nThe person in the video is answersing the question \"Have you concealed a fact to your family or friends in the past year?\". Please carefully observe the person, based on their expression, body languge, eyes, the content and way of speaking, etc. to determine whether the person in the video is lying when he/she answers the question. Please answer Yes or No within the <answer> </answer> tags."
+            }
+          ]
+        }
+      ],
+      "solution": "<answer>Yes</answer>",
+      "problem_type": "judge",
+      "raw": {
+        "Question order": "22",
+        "Question id": "23",
+        "Interviewer evaluation": "4",
+        "Self evaluation of interviewee": "3",
+        "data_type": "video",
+        "problem_type": "judge",
+        "problem": "The person in the video is answersing the question \"Have you concealed a fact to your family or friends in the past year?\". Please carefully observe the person, based on their expression, body languge, eyes, the content and way of speaking, etc. to determine whether the person in the video is lying when he/she answers the question.",
+        "video": "035-22-23.mp4",
+        "solution": "<answer>Yes</answer>",
+        "answer": "Yes",
+        "Type": "deception",
+        "source": "MDPE"
+      },
+      "output": "<context>The person is wearing a yellow jacket and a blue inner layer. The background is a public restroom with beige tiles, a wooden door, and a white hand dryer. The person is sitting on a chair, leaning slightly forward, with a serious expression and a determined look in their eyes. Their mouth is slightly open, and they are speaking in a steady tone. The audio indicates the person is speaking in a steady tone, without noticeable pauses or emotional fluctuations.</context><think>Okay, I'm looking at the person in this video. They're in a public restroom, which is a bit unusual for an interview, but let's focus on them. They're wearing a yellow jacket and a blue inner layer. Their expression is quite serious, and their eyes have a determined look. They're leaning forward a little on the chair, which makes me think they're really engaged in what they're saying. Now, I'm listening to the audio. Their voice is steady, no big emotional swings, no hesitation. They're speaking quite clearly. The question they're answering is, \"Have you concealed a fact to your family or friends in the past year?\" I need to figure out if they're being truthful. Let me look closely at their face again. Their mouth is slightly open, and they seem to be speaking directly. The serious expression and determined eyes, combined with that steady, unhesitant tone of voice, make me think they're quite sure of what they're saying. If they were lying, I'd expect more signs of nervousness – maybe fidgeting, a change in their voice, some eye contact issues. But I don't see or hear anything like that. Their body language is consistent with someone who is confident in their statement. So, based on their serious demeanor, determined eyes, and steady, direct speech, I'm concluding they are not lying.</think><answer>No</answer>",
+      "prediction": "No",
+      "reward": 0.0,
+      "original_prediction": "No",
+      "original_reward": 0,
+      "previous_audited_prediction": "No",
+      "previous_audited_reward": 0,
+      "prediction_status": "valid"
+    }
+  ],
+  "final_acc": [
+    {
+      "mean_acc": 0.3333333333333333
+    }
+  ]
+}

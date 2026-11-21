@@ -1,0 +1,3 @@
+scope,path,expected_type,status
+input,IntentBench/qa.json,file,missing
+input,IntentBench/videos/,directory,missing
