@@ -16,6 +16,8 @@ import torch.nn.functional as F
 
 import av
 
+from answer_scoring import score_response, summarize_scores
+
 def check_if_video_has_audio(video_path):
     try:
         container = av.open(video_path)
@@ -33,93 +35,6 @@ def extract_think(output_str):
     if match:
         return match.group(1).strip()
     return ""
-
-def extract_answer(text):
-    pattern = r'<answer>\s*(.*?)\s*</answer>'
-    match = re.search(pattern, text, re.DOTALL)
-    if match:
-        return match.group(1).strip()
-    return ""
-
-def normalize_number(num_str):
-    try:
-        num_str = num_str.replace(',', '')
-        return float(num_str)
-    except Exception as e:
-        return None
-    
-def mean_relative_accuracy(pred, target, start=0.5, end=0.95, interval=0.05):
-
-    if not torch.is_tensor(pred):
-        pred = torch.tensor(pred, dtype=torch.float32)
-    if not torch.is_tensor(target):
-        target = torch.tensor(target, dtype=torch.float32)
-    
-    epsilon = 1e-8
-    rel_error = torch.abs(pred - target) / (torch.abs(target) + epsilon)
-    
-    thresholds = torch.arange(start, end + interval/2, interval, dtype=torch.float32)
-    
-    conditions = rel_error < (1 - thresholds)  
-    mra = conditions.float().mean()  
-    return mra.item()
-
-
-def emer_ov_mc(reference, hypothesis):
-    list_a = reference.split(",")
-    list_b = hypothesis.split(",")
-    true_positive = len(set(list_a) & set(list_b))
-    precision = true_positive / len(list_a) if list_a else 0
-    recall = true_positive / len(list_b) if list_b else 0
-    if precision + recall > 0:
-        f1_score = 2 * (precision * recall) / (precision + recall)
-    else:
-        f1_score = 0
-    
-    return f1_score
-
-def judge(reference, hypothesis):
-    if "yes" in reference.lower()  and "yes" in hypothesis.lower():
-        return 1
-    elif "no" in reference.lower()  and "no" in hypothesis.lower():
-        return 1
-    else:
-        return 0
-
-def reward_fn(output_ans, gt_ans, question_type):
-    try:
-
-        if question_type == "multiple choice":
-            return 1.0 if output_ans.strip() == gt_ans.strip() else 0.0
-        elif question_type == "numerical":
-            gt_has_decimal = ("." in gt_ans) or ("," in gt_ans)
-            out_has_decimal = ("." in output_ans) or ("," in output_ans)
-            if gt_has_decimal != out_has_decimal:
-                return 0.0
-            gt_number = normalize_number(gt_ans)
-            out_number = normalize_number(output_ans)
-            if gt_number is None or out_number is None:
-                return 0.0
-            return 1.0 if round(gt_number, 2) == round(out_number, 2) else 0.0
-        elif question_type == "regression":
-            gt_number = normalize_number(gt_ans)
-            out_number = normalize_number(output_ans)
-            if gt_number is None or out_number is None:
-                return 0.0
-            mra = mean_relative_accuracy(out_number, gt_number)
-            return mra
-        elif question_type == "emer_ov_mc":
-            return emer_ov_mc(output_ans, gt_ans)
-        elif  question_type == "judge":
-            return judge(output_ans, gt_ans)
-
-        else:
-            return 0.0
-    except Exception as e:
-        return 0.0
-
-
-
 
 SYSTEM_PROMPT = """You are a helpful assistant. Your primary goal is to deeply analyze and interpret information from available various modalities (image, video, audio, text context) to answer questions with human-like depth and a clear, traceable thought process.
 
@@ -418,33 +333,14 @@ def main(args):
 
 
         final_output = []
-        reward_sum = 0
         if torch.distributed.get_rank() == 0:
             print(f"Evaluating {dataset_name} ...")
             for gt, response, sample in zip(merged_gts, merged_responses, merged_sources):
-               
-                # think_chain = extract_think(response)
-                final_ans = extract_answer(response)# response #extract_answer(response)
-                gt_ans = extract_answer(gt)
-                if final_ans == "":
-                    final_ans = model_output
-               
                 sample["output"] = response
-                sample["prediction"] = final_ans
-                problem_type = sample['raw']["problem_type"]
-                reward = reward_fn(final_ans, gt_ans, problem_type)
-
-               
-                sample['reward'] = reward
-                reward_sum += reward
-               
+                sample.update(score_response(response, gt, sample["problem_type"]))
                 final_output.append(sample)
-                
 
-       
-            final_acc={'mean_acc': 0.0}
-            final_acc['mean_acc'] = float(reward_sum)/len(final_output)
-
+            final_acc = summarize_scores(final_output)
             print(final_acc)
             try:
                 os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
